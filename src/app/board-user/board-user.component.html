@@ -1,0 +1,195 @@
+<!-- <div class="container" *ngIf="currentUser; else loggedOut">
+  <header class="jumbotron">
+    <h3>
+      <strong>{{ currentUser.username }}</strong> Profile
+    </h3>
+  </header>
+  <p>
+    <strong>Token:</strong>
+    {{ currentUser.accessToken.substring(0, 20) }} ...
+    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+  </p>
+  <p>
+    <strong>Email:</strong>
+    {{ currentUser.email }}
+  </p>
+  <strong>Roles:</strong>
+  <ul>
+    <li *ngFor="let role of currentUser.roles">
+      {{ role }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template> -->
+
+
+<style>
+  .btn {
+    font-size: 12px;
+  }
+</style>
+
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Content Row -->
+  <div class="row">
+    <!-- Area Chart -->
+    <div class="col-xl-12 col-lg-12">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h3 class="m-0 font-weight-bold text-primary">User</h3>
+
+          <div class="float-right" style="margin: 5px;" *ngIf="addUserDetails">
+            <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm float-right"
+              (click)="backToUserList()">Back</button>
+          </div>
+        </div>
+
+
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="form-row" *ngIf="userDetailsTable">
+            <div class="col-md-12 form-group">
+              <div class="form-row">
+                <div class="col-sm-3 my-1 text-black">
+                  <p><strong style="font-size: 15px;">No&nbsp;of&nbsp;Users&nbsp;:&nbsp;{{userArray.length}}
+                    </strong></p>
+                </div>
+                <div class="col-sm-4 my-1">
+                  <label class="sr-only" for="inlineFormInputGroupUsername">Search</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-search text-primary" aria-hidden="true"></i></div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="searchKeyword"
+                      id="inlineFormInputGroupUsername" placeholder="Search">
+                  </div>
+                </div>
+                <div class="col-sm-4 my-1">
+                  <button class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm float-right"
+                    (click)="addUser()">Add User</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="mt-0" style="overflow: auto; max-height: 300px; scrollbar-width: thin">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th class="text-center">No</th>
+                      <th class="text-center">UserName</th>
+                      <th class="text-center">Email</th>
+                      <th class="text-center">Roles</th>
+                      <th colspan='2' class="text-center">Action</th>
+                    </tr>
+
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let u of users | filter: searchKeyword; let i =index ">
+                      <!-- <tr *ngFor="let u of users; let i =index "> -->
+                      <td class="text-center">{{i+1}}</td>
+                      <td class="text-center">{{u.username}}</td>
+                      <td class="text-center">{{u.email}}</td>
+                      <td *ngFor="let role of u.roles" class="text-center">{{role.name}}</td>
+
+                      <td class="text-center"><button type="button" class="btn btn-primary btn-sm"
+                          (click)="onEditUser(u)">Edit</button></td>
+                      <td class="text-center"><button type="button" class="btn btn-danger btn-sm"
+                          (click)="onDeleteUser(u,i)">Delete</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12" *ngIf="addUserDetails">
+            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+              <div class="row">
+                <div class="row col">
+                  <label><strong>UserName
+                    </strong></label>
+                  <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+                    minlength="3" maxlength="20" #username="ngModel">
+                  <div class="alert-danger" *ngIf="username.errors && f.submitted">
+                    <div *ngIf="username.errors.required">Username is required</div>
+                    <div *ngIf="username.errors.minlength">
+                      Username must be at least 3 characters
+                    </div>
+                    <div *ngIf="username.errors.maxlength">
+                      Username must be at most 20 characters
+                    </div>
+                  </div>
+                </div>
+                &nbsp;
+
+                <div class="row col">
+                  <label><strong>Email
+                    </strong></label> <input type="email" class="form-control" name="email" [(ngModel)]="form.email"
+                    required email #email="ngModel">
+                  <div class="alert-danger" *ngIf="email.errors && f.submitted">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                    <div *ngIf="email.errors.email">
+                      Email must be a valid email address
+                    </div>
+                  </div>
+                </div>
+              </div>
+              &nbsp;
+              <div class="row">
+                <div class="row col">
+                  <label><strong>Password
+                    </strong></label> <input type="password" class="form-control" name="password"
+                    [(ngModel)]="form.password" required minlength="6" #password="ngModel">
+
+                  <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                    <div *ngIf="password.errors.required">Password is required</div>
+                    <div *ngIf="password.errors.minlength">
+                      Password must be at least 6 characters
+                    </div>
+                  </div>
+
+                </div>
+                &nbsp;
+                <div class="row col">
+                  <label><strong>Roles</strong></label>
+                  <select class="form-control" [(ngModel)]="form.uRole" [ngModelOptions]="{standalone: true}">
+                    <option value="ROLE_USER">ROLE_USER
+                    </option>
+                    <option value="ROLE_USER">ROLE_ADMIN
+                    </option>
+                    <option value="ROLE_MODERATOR">ROLE_MODERATOR
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="border border-light p-3 mb-4">
+                <div class="text-center">
+                  <button class="btn btn-success btn-sm">Save</button>&nbsp;&nbsp;
+                  <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                    Signup failed!<br />{{ errorMessage }}
+                  </div>
+                  <!-- <button class="btn btn-danger btn-sm" (click)="clearRegForm()">Reset</button> -->
+                </div>
+              </div>
+            </form>
+
+            <div class="col-md-4">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Content Row -->
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,9 @@
+export const MOBILE_VALIDATION_PATTERN="^((\\+91-?)|0)?[0-9]{10}$"
+//export const PASSWORD_VALIDATION_PATTERN="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+export const PASSWORD_VALIDATION_PATTERN="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])|(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$"
+export const CALIBRATION_CERT_FILE_FORAMT=['image/png','application/vnd.openxmlformats-officedocument.wordprocessingml.document','image/jpeg','application/pdf']
+export const GAUGE_FILE_FORAMT=['image/png','application/vnd.openxmlformats-officedocument.wordprocessingml.document','image/jpeg','application/pdf']
+export const VENDOR_IMPORT_SAMPLE_FILE_NAME="VendorImportSample.xlsx"
+export const OPERATOR_IMPORT_SAMPLE_FILE_NAME="OperatorImportSample.xlsx"
+export const GAUGE_IMPORT_SAMPLE_FILE_NAME="GaugeImportSample.xlsx"
+export const IMAGE_SIZE=4000000

@@ -1,0 +1,523 @@
+
+<!-- Page Wrapper -->
+
+  <!-- ======= Top Bar ======= -->
+  <!-- <div id="topbar" class="d-none d-lg-flex align-items-center">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="fa fa-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="fa fa-phone"></i> 022 6152 0000
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>   
+        <a href="#" class="skype"><i class="fab fa-skype"></i></a>
+        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div> -->
+  <!-- ======= Header ======= -->
+  <!-- <div class="card-header">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a ui-sref="login">Exams<span>.</span></a></h1>
+     
+
+
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a  (click)="ShowHideForHome()">Home</a></li>
+          <li><a  (click)="ShowHideForFeatures()">Features</a></li>
+          <li><a (click)="ShowHideForAbout()">About</a></li>
+          <li><a  (click)="ShowHideForExam()">Exams</a></li>
+          <li><a  (click)="ShowHideForPricing()">Pricing</a></li>
+          <li><a  (click)="ShowHideForContact()">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+   -->
+  <!-- End Header -->
+
+  <marquee class="postTitle" direction="left" speed="slow" behavior="loop">
+    जाहिरात नमुना २०२३,२४  मिशन नोकरी महाअभियान              
+    </marquee>
+  <!-- ======= Hero Section ======= -->
+  <section class="d-flex align-items-center hero" *ngIf="isHero">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Be Exam <span>Ready</span>
+      </h1>
+      <h2>We help you succeed in exams through data driven preparation.</h2>
+      <div class="d-flex">
+        <a href="/register" class="btn-get-started scrollto">Register now</a>
+        <a href="https://www.youtube.com/watch?v=ZEyAs3NWH4A" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="fa fa-play-circle"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main>
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services" *ngIf="isFeatures">
+      <div class="container" data-aos="fade-up" >
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Up-to-date Exam Content</a></h4>
+              <p class="description">वारीतील अभूतपूर्व सोहळे म्हणजे रिंगण होय. डोळ्यांचे पारणे फिटणारे हे सोहळे. वारी आणि रिंगण म्हणजे काय ? रिंगण रचना कशी</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Complete Course Material</a></h4>
+              <p class="description">वारीतील अभूतपूर्व सोहळे म्हणजे रिंगण होय. डोळ्यांचे पारणे फिटणारे हे सोहळे. वारी आणि रिंगण म्हणजे काय ? रिंगण रचना कशी</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Extensive Online Test Series</a></h4>
+              <p class="description">Extensive range of high quality mock tests with thousands of questions and their solutions, as per latest exam pattern. Complete set of practice tests needed for all exams</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-chart"></i></div>
+              <h4 class="title"><a href="">Analytics for Instant Feedback</a></h4>
+              <p class="description">Compare your All India Standing. Study smart with shorter study times through adaptive practice & in-app recommendations. Remedial practice sessions based on your weak areas</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-book"></i></div>
+              <h4 class="title"><a href="">Customized Study Planners</a></h4>
+              <p class="description">Intelligent Planner creates a personalized study schedule based on syllabus, important topics and time available. Track your progress & upcoming tasks</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-camera"></i></div>
+              <h4 class="title"><a href="">Live Group Practice Sessions</a></h4>
+              <p class="description">Fun & engaging group study and practice sessions help you collaborate and compete with friends in live sessions in a game-like environmen</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <!-- <section id="about" class="about section-bg" *ngIf="isAbout">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <h3>Find Out More <span>About Us</span></h3>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <h3>धावत्या बसमध्ये कंडक्टरनं महिलेसोबत ठेवले शरीरसंबंध; प्रवासी VIDEO काढू लागताच.</h3>
+            <p class="font-italic">
+              वारीतील अभूतपूर्व सोहळे म्हणजे रिंगण होय. डोळ्यांचे पारणे फिटणारे हे सोहळे. वारी आणि रिंगण म्हणजे काय ? रिंगण रचना कशी.
+            </p>
+            <ul>
+              <li>
+                <div>
+                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
+                  <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
+                  <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                </div>
+              </li>
+            </ul>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+        </div>
+
+      </div> 
+    </section>-->    <!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <!-- <section id="services" class="services" *ngIf="isServices">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Exams</h2>
+          <h3>Check Our <span>Exams</span></h3>
+          
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-bank"></i></div>
+              <h4><a href="">Banking</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+              <h4><a href="">MBA</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-building"></i></div>
+              <h4><a href="">Government and Insurance Exams</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="fa fa-university"></i></div>
+              <h4><a href="">Campus Placements</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+     </section> -->  <!-- End Services Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <!-- <section id="pricing" class="pricing" *ngIf="isPricing">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <h3>Check our <span>Pricing</span></h3>
+          <p>Accelerate your Test Preparation</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Free</h3>
+              <h4><sup>â‚¹</sup>0<span> / month</span></h4>
+              <ul>
+                <li>Video Lessons, Textual Lessons & Notes</li>
+                <li>Topic Tests covering all topics with detailed solutions</li>
+                <li>Sectional Tests for QA, DI, EL, LR</li>
+                <li>All India Mock Tests for performance analysis and all India percentile</li>
+                <li>General Knowledge (GK) Tests</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Amateur</h3>
+              <h4><sup>â‚¹</sup>399<span> / month</span></h4>
+              <ul>
+                <li>Video Lessons, Textual Lessons & Notes</li>
+                <li>Topic Tests covering all topics with detailed solutions</li>
+                <li>Sectional Tests for QA, DI, EL, LR</li>
+                <li>All India Mock Tests for performance analysis and all India percentile</li>
+                <li>General Knowledge (GK) Tests</li>
+                <!-- <li class="na">General Knowledge (GK) Tests</li> 
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Intermediate</h3>
+              <h4><sup>â‚¹</sup>799<span> / month</span></h4>
+              <ul>
+                <li>Video Lessons, Textual Lessons & Notes</li>
+                <li>Topic Tests covering all topics with detailed solutions</li>
+                <li>Sectional Tests for QA, DI, EL, LR</li>
+                <li>All India Mock Tests for performance analysis and all India percentile</li>
+                <li>General Knowledge (GK) Tests</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <span class="advanced">Advanced</span>
+              <h3>Advanced</h3>
+              <h4><sup>â‚¹</sup>999<span> / month</span></h4>
+              <ul>
+                <li>Video Lessons, Textual Lessons & Notes</li>
+                <li>Topic Tests covering all topics with detailed solutions</li>
+                <li>Sectional Tests for QA, DI, EL, LR</li>
+                <li>All India Mock Tests for performance analysis and all India percentile</li>
+                <li>General Knowledge (GK) Tests</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div> 
+    </section> -->  <!-- End Pricing Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <!-- <section id="contact" class="contact" *ngIf="isContact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Weâ€™d love to Hear from You.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="fa fa-map"></i>
+              <h3>Our Address</h3>
+              <p>Raheja Chambers, 1011-1015, 10th Floor, Free Press Journal Marg, Nariman Point, Mumbai, Maharashtra 400021</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="fa fa-envelope"></i>
+              <h3>Email Us</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="fa fa-phone"></i>
+              <h3>Call Us</h3>
+              <p> 022 6152 0000</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15096.663775048899!2d72.8236078!3d18.9240476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c4a52c661fdb43a!2sS2%20Infotech%20International%20Ltd.!5e0!3m2!1sen!2sin!4v1621526881420!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>       End Contact Section -->
+
+  </main><!-- End #main -->
+  
+    
+    
+    <!--==============================================================================================-->
+    <!-- USER LOGIN PAGE -->
+    <!--==============================================================================================-->
+    
+    <!-- <div style="float: right;width: 25%;position: -webkit-sticky;position: sticky;top: 0;">
+        <div ng-app="registration">
+            <div class="login-form" style="width: 100%;">
+                <div class="login-form-header">
+                    <h3 class="text-center">
+                        Login
+                    </h3>
+                </div>
+                <div class="login-body" >
+    
+                    <form style="margin: 5% 0 0;" [formGroup]="loginForm">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"><strong>Email</strong></label>        
+                            <input type="text" formControlName="email" class="form-control" placeholder="Enter Email">
+                      
+                        </div>
+                        <div class="form-group">
+                            <label><strong>Password</strong></label>
+                            <input type="password" class="form-control" formControlName="password"
+                            placeholder="Enter Password">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-success btn-sm" (click)="loginUser()">Login</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary btn-sm" [routerLink]="['/register']" >Register</button>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <div class="demo-exam-btn">
+                               
+                                <button class="btn btn-primary btn-sm" [routerLink]="['/study-center']">Study Center Registration</button>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                          <div class="demo-exam-btn">
+                              <a ui-sref="dummy_exam" [routerLink]="['/dummy']" class="btn" style="width: 100%">
+                                 Demo Test
+                              </a>
+                          </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!--==============================================================================================-->
+    <!-- END: USER LOGIN PAGE -->
+    <!--==============================================================================================-->
+    
+    <div class="clearfix"></div>
+    
+
+  <!-- ======= Footer ======= -->
+  <!-- <footer id="footer" style="position: relative">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Exams<span>.</span></h3>
+            <p>
+              Raheja Chambers, 1011-1015,<br>
+               10th Floor, Free Press Journal Marg, <br>
+                Nariman Point, Mumbai,<br>
+                 Maharashtra 400021<br><br>
+              <strong>Phone:</strong> 022 6152 0000<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="home">Home</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="features">Features</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="about">About</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="login">Exams</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="pricing">Pricing</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a ui-sref="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a href="#">Service 1</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a href="#">Service 2</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a href="#">Service 3</a></li>
+              <li><i class="fa fa-angle-right"></i>&nbsp; <a href="#">Service 4</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <div class="social-links mt-3">
+              <a href="#" class="fab fa-twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="fab fa-facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="fab fa-instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="fab fa-google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="fab fa-linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">	
+      <div class="copyright">
+        &copy; Copyright <strong><span>Exams</span></strong>. All Rights Reserved
+      </div>
+    </div> 
+  </footer>  -->     <!-- End Footer -->
+  
+
+<!-- End of Page Wrapper -->
+
+<!--  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>-->
+
+  <!-- Vendor JS Files -->
+  <script src="asset/vendor/jquery/jquery.min.js"></script>
+  <script src="asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="asset/vendor/php-email-form/validate.js"></script>
+  <script src="asset/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="asset/vendor/counterup/counterup.min.js"></script>
+  <script src="asset/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="asset/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="asset/vendor/venobox/venobox.min.js"></script>
+  <script src="asset/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="asset/js/main.js"></script>

@@ -1,0 +1,14 @@
+{
+    
+    "/Angular11JwtAuth":{
+        "target":"http://localhost:7070",
+        "secure":false,
+        "changeOrigin": true
+    },
+    "/gms-backend":{
+        "target":"http://103.148.165.218:7070",
+        "secure":false,
+        "changeOrigin": true
+    }
+
+}
